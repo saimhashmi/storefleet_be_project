@@ -1,0 +1,862 @@
+{
+  "info": {
+    "_postman_id": "eb941792-d2d5-41dd-8b20-b089d6649157",
+    "name": "StoreFleet",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "38383107",
+    "_collection_link": "https://go.postman.co/collection/15790133-eb941792-d2d5-41dd-8b20-b089d6649157?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "products",
+      "item": [
+        {
+          "name": "getAllProducts",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/storefleet/product/products?page=2",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "storefleet",
+                "product",
+                "products"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "2"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "addNewProduct",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\":\"iphone12\",\n    \"description\":\"iphone12 256GB green\",\n    \"price\":125000,\n    \"category\":\"Mobile\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/storefleet/product/add",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "storefleet",
+                "product",
+                "add"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "updateProduct",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\":\"iphone15\",\n    \"description\":\"iphone15 256GB green\",\n    \"price\":150000,\n    \"category\":\"Mobile\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/storefleet/product/update/653438f8ce06ad82befd40e8",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "storefleet",
+                "product",
+                "update",
+                "653438f8ce06ad82befd40e8"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "deleteProduct",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/storefleet/product/delete/6536b46668340a68d42d65e8",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "storefleet",
+                "product",
+                "delete",
+                "6536b46668340a68d42d65e8"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "productDetails",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/storefleet/product/details/653438f8ce06ad82befd40e8",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "storefleet",
+                "product",
+                "details",
+                "653438f8ce06ad82befd40e8"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "searchProduct",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/storefleet/product/products?keyword=samsung&page=1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "storefleet",
+                "product",
+                "products"
+              ],
+              "query": [
+                {
+                  "key": "keyword",
+                  "value": "samsung"
+                },
+                {
+                  "key": "page",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "filterProductByCategory",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/storefleet/product/products?keyword=oneplus&page=1&category=Mobile",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "storefleet",
+                "product",
+                "products"
+              ],
+              "query": [
+                {
+                  "key": "keyword",
+                  "value": "oneplus"
+                },
+                {
+                  "key": "page",
+                  "value": "1"
+                },
+                {
+                  "key": "category",
+                  "value": "Mobile"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "filterProductByPrice",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/storefleet/product/products?keyword=iphone&price[gte]=10000&price[lte]=200000",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "storefleet",
+                "product",
+                "products"
+              ],
+              "query": [
+                {
+                  "key": "keyword",
+                  "value": "iphone"
+                },
+                {
+                  "key": "price[gte]",
+                  "value": "10000"
+                },
+                {
+                  "key": "price[lte]",
+                  "value": "200000"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "filterProductByRating",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/storefleet/product/products?rating[gte]=0&rating[lte]=4",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "storefleet",
+                "product",
+                "products"
+              ],
+              "query": [
+                {
+                  "key": "rating[gte]",
+                  "value": "0"
+                },
+                {
+                  "key": "rating[lte]",
+                  "value": "4"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "rateProduct",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"rating\":5,\n    \"comment\":\"woowww!!\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/storefleet/product/rate/6536cb0d187b2bebbd6284be",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "storefleet",
+                "product",
+                "rate",
+                "6536cb0d187b2bebbd6284be"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "allReviews",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/storefleet/product/reviews/6536cb0d187b2bebbd6284be",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "storefleet",
+                "product",
+                "reviews",
+                "6536cb0d187b2bebbd6284be"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "deleteReview",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/storefleet/product/review/delete?productId=6536cb0d187b2bebbd6284be&reviewId=653d6fd94e3ed43f18e17c20",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "storefleet",
+                "product",
+                "review",
+                "delete"
+              ],
+              "query": [
+                {
+                  "key": "productId",
+                  "value": "6536cb0d187b2bebbd6284be"
+                },
+                {
+                  "key": "reviewId",
+                  "value": "653d6fd94e3ed43f18e17c20"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "users",
+      "item": [
+        {
+          "name": "signup",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\":\"gaurav\",\n    \"email\":\"gaurav.tripathi@codingninjas.com\",\n    \"password\":\"vivek28@\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/storefleet/user/signup",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "storefleet",
+                "user",
+                "signup"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"email\":\"gaurav.tripathi@codingninjas.com\",\n    \"password\":\"gaurav@\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/storefleet/user/login",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "storefleet",
+                "user",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "logout",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/storefleet/user/logout",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "storefleet",
+                "user",
+                "logout"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "forgetPassword",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n     \"email\":\"gaurav.tripathi@codingninjas.com\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/storefleet/user/password/forget",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "storefleet",
+                "user",
+                "password",
+                "forget"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "resetPassword",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"password\":\"gaurav@\",\n    \"confirmPassword\":\"gaurav@\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/storefleet/user/password/reset/cec991bb546c4e6222ae0c1e655ca8935e255a6e",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "storefleet",
+                "user",
+                "password",
+                "reset",
+                "cec991bb546c4e6222ae0c1e655ca8935e255a6e"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "details",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/storefleet/user/details",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "storefleet",
+                "user",
+                "details"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "updatePasswords",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"currentPassword\":\"pass123@\",\n    \"newPassword\":\"vivek28@\",\n    \"confirmPassword\":\"vivek28@\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/storefleet/user/password/update",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "storefleet",
+                "user",
+                "password",
+                "update"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "updateProfile",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\":\"admin\",\n    \"email\":\"admin@storefleet.com\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/storefleet/user/profile/update",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "storefleet",
+                "user",
+                "profile",
+                "update"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "admin",
+      "item": [
+        {
+          "name": "getAllUsersDetails",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/storefleet/user/admin/allusers",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "storefleet",
+                "user",
+                "admin",
+                "allusers"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getUserDetails",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/storefleet/user/admin/details/653bec965ebeac4d833a2544",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "storefleet",
+                "user",
+                "admin",
+                "details",
+                "653bec965ebeac4d833a2544"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "deleteUser",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/storefleet/user/admin/delete/653bc13ba136a2f2847cbb9e",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "storefleet",
+                "user",
+                "admin",
+                "delete",
+                "653bc13ba136a2f2847cbb9e"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "updateUserRoleAndProfile",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\":\"test2\",\n    \"email\":\"test2@gmail.com\",\n    \"role\":\"admin\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/storefleet/user/admin/update/653d0c8cb4bfd658cd6d35a0",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "storefleet",
+                "user",
+                "admin",
+                "update",
+                "653d0c8cb4bfd658cd6d35a0"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "order",
+      "item": [
+        {
+          "name": "placeNewOrder",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"shippingInfo\":\n    {\n        \"address\":\"282 janvadi \",\n        \"city\":\"GokhaleNagar\",\n        \"state\":\"Maharastra\",\n        \"country\":\"IN\",\n        \"pincode\":411002,\n        \"phoneNumber\":7839358367\n    },\n    \"orderedItems\":[{\n        \"product\":\"6536cb0d187b2bebbd6284be\",\n        \"name\":\"iphone13\",\n        \"price\":100000,\n        \"image\":\"sampleImg.jpg\",\n        \"quantity\":1\n\n    }],\n    \"paymentInfo\":{\n        \"id\":\"sample id\",\n        \"status\":true\n    },\n    \"itemsPrice\":100000,\n    \"taxPrice\":18000,\n    \"shippingPrice\":1000,\n    \"totalPrice\":119000\n  }",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/storefleet/order/new",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "storefleet",
+                "order",
+                "new"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getSingleOrder",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/storefleet/order/653eaaed889863be26c0b46c",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "storefleet",
+                "order",
+                "653eaaed889863be26c0b46c"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "myOrders",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/storefleet/order/my/orders",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "storefleet",
+                "order",
+                "my",
+                "orders"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "allPlacedOrders",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/storefleet/order/orders/placed",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "storefleet",
+                "order",
+                "orders",
+                "placed"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "updateOrderDetails",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"orderStatus\":\"Shipped\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/storefleet/order/update/653eaaed889863be26c0b46c",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "api",
+                "storefleet",
+                "order",
+                "update",
+                "653eaaed889863be26c0b46c"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
